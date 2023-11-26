@@ -1,0 +1,41 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="factory_expansion"
+version="1.19.2-0.0.1"
+displayName='Thermal: Factory Needs Expansion'
+credits='Team CoFH'
+authors="ElysiaSilly, GraeyAmber"
+description='''
+Thermal: Factory Needs Expansion\n\n---Thermal: Factory Needs Expansion is an addon for Thermal Series mods by TeamCoFH. This mod is centered around decorative blocks that fit Thermal Seres' aesthetics and expands on its existing materials.\n---The mod name is a pun of "Thermal Expansion" and "The Factory Must Grow".
+'''
+
+[[dependencies.factory_expansion]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[${minecraft_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.factory_expansion]]
+modId = "forge"
+mandatory = true
+versionRange = "[${forge_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.factory_expansion]]
+modId = "cofh_core"
+mandatory = true
+versionRange = "[${cofh_core_version}, ${cofh_core_max_version}]"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.factory_expansion]]
+modId = "thermal"
+mandatory = true
+versionRange = "[${thermal_core_version}, ${thermal_core_max_version}]"
+ordering = "AFTER"
+side = "BOTH"
