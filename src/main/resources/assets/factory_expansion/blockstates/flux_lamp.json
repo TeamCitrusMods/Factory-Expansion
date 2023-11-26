@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "factory_expansion:block/lamp_unlit"
+    },
+    "lit=true": {
+      "model": "factory_expansion:block/lamp_lit"
+    }
+  }
+}

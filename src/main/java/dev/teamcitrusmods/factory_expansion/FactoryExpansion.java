@@ -1,6 +1,7 @@
 package dev.teamcitrusmods.factory_expansion;
 
 import com.mojang.logging.LogUtils;
+import dev.teamcitrusmods.factory_expansion.block.ModBlocks;
 import dev.teamcitrusmods.factory_expansion.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
@@ -35,6 +36,7 @@ public class FactoryExpansion
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

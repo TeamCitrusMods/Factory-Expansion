@@ -1,7 +1,6 @@
 package dev.teamcitrusmods.factory_expansion.item;
 
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,7 +13,7 @@ public class ModItems {
 
     // ITEMS
     public static final RegistryObject<Item> FAUX_COIL = ITEMS.register("faux_coil",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FACTORY_EXPANSION_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
