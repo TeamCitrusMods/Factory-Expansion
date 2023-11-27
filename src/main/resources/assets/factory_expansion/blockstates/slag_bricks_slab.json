@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factory_expansion:block/slag_bricks_slab"
+    },
+    "type=double": {
+      "model": "thermal:block/slag_bricks"
+    },
+    "type=top": {
+      "model": "factory_expansion:block/slag_bricks_slab_top"
+    }
+  }
+}
