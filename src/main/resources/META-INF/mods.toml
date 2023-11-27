@@ -1,11 +1,12 @@
 modLoader="javafml"
 loaderVersion="[43,)"
-license="All Rights Reserved"
+license="Custom"
 
 [[mods]]
 modId="factory_expansion"
 version="1.19.2-0.0.1"
 displayName='Thermal: Factory Needs Expansion'
+displayUrl='https://github.com/TeamCitrusMods/Factory-Expansion'
 credits='Team CoFH'
 authors="ElysiaSilly, GraeyAmber"
 description='''

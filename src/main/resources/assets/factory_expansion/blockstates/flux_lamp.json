@@ -1,10 +1,10 @@
 {
   "variants": {
     "lit=false": {
-      "model": "factory_expansion:block/lamp_unlit"
+      "model": "factory_expansion:block/flux_lamp_unlit"
     },
     "lit=true": {
-      "model": "factory_expansion:block/lamp_lit"
+      "model": "factory_expansion:block/flux_lamp_lit"
     }
   }
 }

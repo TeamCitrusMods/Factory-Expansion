@@ -1,10 +1,10 @@
 {
 	"credit": "an ElysiaSilly creation :D",
 	"textures": {
-		"1": "minecraft:block/lamp_bulb",
-		"2": "minecraft:block/lamp_base",
-		"3": "minecraft:block/lamp_lit",
-		"particle": "minecraft:block/lamp_bulb"
+		"1": "factory_expansion:block/lamp_bulb",
+		"2": "factory_expansion:block/lamp_base",
+		"3": "factory_expansion:block/lamp_lit",
+		"particle": "factory_expansion:block/lamp_bulb"
 	},
 	"render_type": "translucent",
 	"ambientocclusion": "false",

@@ -6,7 +6,6 @@ import dev.teamcitrusmods.factory_expansion.item.ModCreativeModeTab;
 import dev.teamcitrusmods.factory_expansion.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
@@ -40,9 +39,17 @@ public class ModBlocks {
                     .lightLevel(litBlockEmission(15))
                     .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
+    public static final RegistryObject<Block> FLUX_LAMP_INVERTED = registerBlock("flux_lamp_inverted",
+            () -> new FluxLampBlock(BlockBehaviour.Properties
+                    .of(Material.METAL)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(litBlockEmission(0))
+                    .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
     private static ToIntFunction<BlockState> litBlockEmission(int pLightValue) {
         return (p_50763_) -> {
-            return p_50763_.getValue(BlockStateProperties.LIT) ? pLightValue : 0;
+            return p_50763_.getValue(BlockStateProperties.LIT) ? pLightValue : 15 - pLightValue;
         };
     }
 
