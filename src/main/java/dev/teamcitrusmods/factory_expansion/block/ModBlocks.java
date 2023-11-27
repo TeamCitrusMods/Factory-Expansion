@@ -25,11 +25,39 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FactoryExpansion.MODID);
 
-    public static final RegistryObject<Block> SLAG_BRICKS_SLAB = registerBlock("slag_bricks_slab",
+    public static final RegistryObject<SlabBlock> SLAG_BRICKS_SLAB = registerBlock("slag_bricks_slab",
             () -> new SlabBlock(BlockBehaviour.Properties
                     .of(Material.STONE)
                     .strength(6f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<Block> LIGHT_THERMAL_PLATING = registerBlock("light_thermal_plating",
+            () -> new Block(BlockBehaviour.Properties
+                    .of(Material.METAL)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<Block> TILED_LIGHT_THERMAL_PLATING = registerBlock("tiled_light_thermal_plating",
+            () -> new Block(BlockBehaviour.Properties
+                    .of(Material.METAL)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<Block> DARK_THERMAL_PLATING = registerBlock("dark_thermal_plating",
+            () -> new Block(BlockBehaviour.Properties
+                    .of(Material.METAL)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<Block> TILED_DARK_THERMAL_PLATING = registerBlock("tiled_dark_thermal_plating",
+            () -> new Block(BlockBehaviour.Properties
+                    .of(Material.METAL)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
     public static final RegistryObject<Block> FLUX_LAMP = registerBlock("flux_lamp",
             () -> new FluxLampBlock(BlockBehaviour.Properties
@@ -47,12 +75,12 @@ public class ModBlocks {
                     .lightLevel(litBlockEmission(0))
                     .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
+
     private static ToIntFunction<BlockState> litBlockEmission(int pLightValue) {
         return (p_50763_) -> {
             return p_50763_.getValue(BlockStateProperties.LIT) ? pLightValue : 15 - pLightValue;
         };
     }
-
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
