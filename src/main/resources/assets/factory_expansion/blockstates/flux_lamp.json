@@ -1,5 +1,6 @@
 {
   "variants": {
+<<<<<<< Updated upstream
     "facing=down,lit=false": {
       "model": "factory_expansion:block/flux_lamp_unlit",
       "x": 180
@@ -51,6 +52,13 @@
       "model": "factory_expansion:block/flux_lamp_lit",
       "x": 90,
       "y": 270
+=======
+    "lit=false": {
+      "model": "factory_expansion:block/flux_lamp/unlit"
+    },
+    "lit=true": {
+      "model": "factory_expansion:block/flux_lamp/lit"
+>>>>>>> Stashed changes
     }
   }
 }

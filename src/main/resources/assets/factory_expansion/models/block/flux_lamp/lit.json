@@ -1,10 +1,10 @@
 {
 	"credit": "an ElysiaSilly creation :D",
 	"textures": {
-		"1": "factory_expansion:block/lamp_bulb",
-		"2": "factory_expansion:block/lamp_base",
-		"3": "factory_expansion:block/lamp_lit",
-		"particle": "factory_expansion:block/lamp_bulb"
+		"1": "factory_expansion:block/flux_lamp/bulb",
+		"2": "factory_expansion:block/flux_lamp/base",
+		"3": "factory_expansion:block/flux_lamp/bulb_lit",
+		"particle": "factory_expansion:block/flux_lamp/bulb"
 	},
 	"render_type": "translucent",
 	"ambientocclusion": "false",
