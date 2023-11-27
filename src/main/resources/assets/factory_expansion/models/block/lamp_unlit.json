@@ -1,9 +1,9 @@
 {
 	"credit": "an ElysiaSilly creation :D",
 	"textures": {
-		"1": "factory_expansion:block/lamp_bulb",
-		"2": "factory_expansion:block/lamp_base",
-		"particle": "factory_expansion:block/lamp_bulb"
+		"1": "minecraft:block/lamp_bulb",
+		"2": "minecraft:block/lamp_base",
+		"particle": "minecraft:block/lamp_bulb"
 	},
 	"render_type": "translucent",
 	"ambientocclusion": "false",
@@ -34,21 +34,9 @@
 			}
 		},
 		{
-			"name": "outside",
-			"from": [4, 2, 4],
-			"to": [12, 10, 12],
-			"faces": {
-				"north": {"uv": [0, 8, 8, 16], "rotation": 90, "texture": "#1"},
-				"east": {"uv": [0, 8, 8, 16], "rotation": 90, "texture": "#1"},
-				"south": {"uv": [0, 8, 8, 16], "rotation": 90, "texture": "#1"},
-				"west": {"uv": [0, 8, 8, 16], "rotation": 90, "texture": "#1"},
-				"up": {"uv": [8, 8, 16, 16], "texture": "#1"}
-			}
-		},
-		{
 			"name": "outsideInner",
-			"from": [11.9, 9.9, 11.9],
-			"to": [4.1, 2, 4.1],
+			"from": [11.8, 9.8, 11.8],
+			"to": [4.2, 2, 4.2],
 			"faces": {
 				"north": {"uv": [0, 8, 8, 16], "rotation": 90, "texture": "#1"},
 				"east": {"uv": [0, 8, 8, 16], "rotation": 90, "texture": "#1"},
