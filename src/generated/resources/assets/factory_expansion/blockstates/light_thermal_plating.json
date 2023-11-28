@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "factory_expansion:block/light_thermal_plating"
+    }
+  }
+}
