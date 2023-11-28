@@ -9,6 +9,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -35,11 +36,17 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties
                     .of(Material.METAL)
                     .strength(6f)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
     public static final RegistryObject<Block> TILED_LIGHT_THERMAL_PLATING = registerBlock("tiled_light_thermal_plating",
             () -> new Block(BlockBehaviour.Properties
+                    .of(Material.METAL)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<StairBlock> TILED_LIGHT_THERMAL_PLATING_STAIRS = registerBlock("tiled_light_thermal_plating_stairs",
+            () -> new StairBlock(() ->TILED_LIGHT_THERMAL_PLATING.get().defaultBlockState(),
+                    BlockBehaviour.Properties
                     .of(Material.METAL)
                     .strength(6f)
                     .requiresCorrectToolForDrops()
@@ -49,15 +56,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties
                     .of(Material.METAL)
                     .strength(6f)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
     public static final RegistryObject<Block> TILED_DARK_THERMAL_PLATING = registerBlock("tiled_dark_thermal_plating",
             () -> new Block(BlockBehaviour.Properties
                     .of(Material.METAL)
                     .strength(6f)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
     public static final RegistryObject<Block> FLUX_LAMP = registerBlock("flux_lamp",
             () -> new FluxLampBlock(BlockBehaviour.Properties
