@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "factory_expansion:block/light_thermal_plating"
+    "all": "factory_expansion:block/thermal/bright/plating"
   }
 }

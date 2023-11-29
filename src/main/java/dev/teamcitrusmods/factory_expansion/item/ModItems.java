@@ -12,7 +12,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, FactoryExpansion.MODID);
 
     // ITEMS
-    public static final RegistryObject<Item> FAUX_COIL = ITEMS.register("faux_coil",
+    public static final RegistryObject<Item> MANA_CRYSTAL = ITEMS.register("mana_crystal",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FACTORY_EXPANSION_TAB)));
+    public static final RegistryObject<Item> MANA_CRYSTAL_ACTIVE = ITEMS.register("mana_crystal_active",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FACTORY_EXPANSION_TAB)));
 
     public static void register(IEventBus eventBus) {

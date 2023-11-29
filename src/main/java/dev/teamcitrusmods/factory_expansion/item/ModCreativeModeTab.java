@@ -8,7 +8,7 @@ public class ModCreativeModeTab {
             new CreativeModeTab("factory_expansion_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.FAUX_COIL.get());
+            return new ItemStack(ModItems.MANA_CRYSTAL.get());
         }
     };
 }

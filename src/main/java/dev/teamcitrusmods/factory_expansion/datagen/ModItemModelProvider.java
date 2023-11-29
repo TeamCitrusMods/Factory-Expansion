@@ -17,7 +17,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        // simpleItem(ModItems.MANA_CRYSTAL);
+        simpleItem(ModItems.MANA_CRYSTAL);
+
+        simpleItem(ModItems.MANA_CRYSTAL_ACTIVE);
     }
 
 
