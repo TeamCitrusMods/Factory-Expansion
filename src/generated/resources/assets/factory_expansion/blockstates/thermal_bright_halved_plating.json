@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "factory_expansion:block/thermal_bright_halved_plating_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "factory_expansion:block/thermal_bright_halved_plating"
+    },
+    "axis=z": {
+      "model": "factory_expansion:block/thermal_bright_halved_plating_horizontal",
+      "x": 90
+    }
+  }
+}

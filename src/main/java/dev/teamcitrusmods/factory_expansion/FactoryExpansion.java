@@ -30,7 +30,7 @@ import org.slf4j.Logger;
 public class FactoryExpansion
 {
     public static final String MODID = "factory_expansion";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     public FactoryExpansion()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

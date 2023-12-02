@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "factory_expansion:block/thermal/bright/plating",
+    "side": "factory_expansion:block/thermal/bright/halved_plating"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "factory_expansion:block/thermal/dark/pipe_end",
+    "side": "factory_expansion:block/thermal/dark/pipe_side"
+  }
+}

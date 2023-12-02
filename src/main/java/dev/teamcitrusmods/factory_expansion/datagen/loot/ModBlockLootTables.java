@@ -11,11 +11,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.FLUX_LAMP.get());
         this.dropSelf(ModBlocks.FLUX_LAMP_INVERTED.get());
 
-        this.dropSelf(ModBlocks.LIGHT_THERMAL_PLATING.get());
-        this.dropSelf(ModBlocks.TILED_LIGHT_THERMAL_PLATING.get());
-
-        this.dropSelf(ModBlocks.DARK_THERMAL_PLATING.get());
-        this.dropSelf(ModBlocks.TILED_DARK_THERMAL_PLATING.get());
+        this.dropSelf(ModBlocks.THERMAL_BRIGHT_PLATING.get());
 
         this.dropSelf(ModBlocks.SLAG_BRICKS_SLAB.get());
     }

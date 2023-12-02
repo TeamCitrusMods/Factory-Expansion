@@ -2,6 +2,7 @@ package dev.teamcitrusmods.factory_expansion.datagen;
 
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,5 +24,8 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), itemModelProvider);
         // generator.addProvider(event.includeClient(), lootTableProvider);
         generator.addProvider(event.includeClient(), recipeProvider);
+
+        BlockTagsProvider blockTags = new ModBlockTagGenerator(generator, file);
+        generator.addProvider(event.includeClient(), blockTags);
     }
 }

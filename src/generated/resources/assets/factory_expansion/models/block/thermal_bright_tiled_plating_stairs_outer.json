@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "factory_expansion:block/thermal/bright/tiled_plating",
+    "side": "factory_expansion:block/thermal/bright/tiled_plating",
+    "top": "factory_expansion:block/thermal/bright/tiled_plating"
+  }
+}

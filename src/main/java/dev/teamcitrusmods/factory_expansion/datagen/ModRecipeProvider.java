@@ -18,20 +18,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
 
-        ShapedRecipeBuilder.shaped(ModBlocks.TILED_LIGHT_THERMAL_PLATING.get(), 4)
-                .define('L', ModBlocks.LIGHT_THERMAL_PLATING.get())
-                .pattern("LL")
-                .pattern("LL")
-                .unlockedBy("has_light_thermal_plating",
-                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.LIGHT_THERMAL_PLATING.get()).build()))
-                .save(pFinishedRecipeConsumer);
 
-        ShapedRecipeBuilder.shaped(ModBlocks.TILED_DARK_THERMAL_PLATING.get(), 4)
-                .define('D', ModBlocks.DARK_THERMAL_PLATING.get())
-                .pattern("DD")
-                .pattern("DD")
-                .unlockedBy("has_dark_thermal_plating",
-                        inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.DARK_THERMAL_PLATING.get()).build()))
-                .save(pFinishedRecipeConsumer);
     }
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factory_expansion:block/smile_slab"
+    },
+    "type=double": {
+      "model": "factory_expansion:block/smile"
+    },
+    "type=top": {
+      "model": "factory_expansion:block/smile_slab_top"
+    }
+  }
+}

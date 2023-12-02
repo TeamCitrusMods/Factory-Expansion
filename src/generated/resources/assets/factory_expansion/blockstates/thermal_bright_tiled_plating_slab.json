@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "factory_expansion:block/thermal_bright_tiled_plating_slab"
+    },
+    "type=double": {
+      "model": "factory_expansion:block/thermal_bright_tiled_plating"
+    },
+    "type=top": {
+      "model": "factory_expansion:block/thermal_bright_tiled_plating_slab_top"
+    }
+  }
+}

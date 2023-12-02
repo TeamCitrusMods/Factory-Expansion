@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "factory_expansion:block/thermal_dark_pipe_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "factory_expansion:block/thermal_dark_pipe"
+    },
+    "axis=z": {
+      "model": "factory_expansion:block/thermal_dark_pipe_horizontal",
+      "x": 90
+    }
+  }
+}
