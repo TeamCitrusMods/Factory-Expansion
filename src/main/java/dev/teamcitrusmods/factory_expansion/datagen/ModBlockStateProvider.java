@@ -60,6 +60,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockPathWithItem(ModBlocks.MANA_CRYSTAL_POLISHED.get(), "factory_expansion:block/mana_crystal/polished");
         simpleBlockPathWithItem(ModBlocks.MANA_CRYSTAL_POLISHED_ACTIVE.get(), "factory_expansion:block/mana_crystal/polished_active");
 
+        simpleBlockPathWithItem(ModBlocks.INDUSTRIAL_ROUGH_TILES.get(), "factory_expansion:block/industrial/rough_tiles/rough_tiles");
+        simpleBlockPathWithItem(ModBlocks.INDUSTRIAL_ROUGH_TILES_WALL.get(), "factory_expansion:block/industrial/rough_tiles/exposed_wall");
+
 
 
         /* tests

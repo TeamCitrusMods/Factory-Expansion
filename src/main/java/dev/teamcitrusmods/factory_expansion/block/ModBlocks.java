@@ -59,6 +59,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> MANA_CRYSTAL_POLISHED = registerBlock("mana_crystal_polished", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<Block> MANA_CRYSTAL_POLISHED_ACTIVE = registerBlock("mana_crystal_polished_active", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
+    public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES = registerBlock("industrial_rough_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES_EXPOSED = registerBlock("industrial_rough_tiles_exposed", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES_WALL = registerBlock("industrial_rough_tiles_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
 
     // delete, not in final mod
     public static final RegistryObject<Block> SMILE = registerBlock("smile", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
