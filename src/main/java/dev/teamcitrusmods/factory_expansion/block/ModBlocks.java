@@ -39,6 +39,14 @@ public class ModBlocks {
     public static final RegistryObject<StairBlock> SLAG_BRICKS_STAIRS = registerBlock("slag_bricks_stairs", () -> new StairBlock(() -> ThermalCore.BLOCKS.get(ID_SLAG_BRICKS).defaultBlockState(), BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BRICKS))), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<WallBlock> SLAG_BRICKS_WALL = registerBlock("slag_bricks_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BRICKS))), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
+    public static final RegistryObject<SlabBlock> RICH_SLAG_BLOCK_SLAB = registerBlock("rich_slag_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BLOCK))), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<StairBlock> RICH_SLAG_BLOCK_STAIRS = registerBlock("rich_slag_block_stairs", () -> new StairBlock(() -> ThermalCore.BLOCKS.get(ID_SLAG_BLOCK).defaultBlockState(), BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BLOCK))), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<WallBlock> RICH_SLAG_BLOCK_WALL = registerBlock("rich_slag_block_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BLOCK))), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<SlabBlock> RICH_SLAG_BRICKS_SLAB = registerBlock("rich_slag_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BRICKS))), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<StairBlock> RICH_SLAG_BRICKS_STAIRS = registerBlock("rich_slag_bricks_stairs", () -> new StairBlock(() -> ThermalCore.BLOCKS.get(ID_SLAG_BRICKS).defaultBlockState(), BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BRICKS))), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<WallBlock> RICH_SLAG_BRICKS_WALL = registerBlock("rich_slag_bricks_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BRICKS))), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
 
     // --- FACTORY_EXPANSION BLOCKS
 
@@ -53,6 +61,8 @@ public class ModBlocks {
     public static final RegistryObject<SlabBlock> THERMAL_DARK_TILED_PLATING_SLAB = registerBlock("thermal_dark_tiled_plating_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<StairBlock> THERMAL_DARK_TILED_PLATING_STAIRS = registerBlock("thermal_dark_tiled_plating_stairs", () -> new StairBlock(() -> THERMAL_BRIGHT_TILED_PLATING.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<RotatedPillarBlock> THERMAL_DARK_PIPE = registerBlock("thermal_dark_pipe", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<Block> THERMAL_BRIGHT_DARK_TRANSITION = registerBlock("thermal_bright_dark_transition", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
     public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK = registerBlock("mana_crystal_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK_ACTIVE = registerBlock("mana_crystal_block_active", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);

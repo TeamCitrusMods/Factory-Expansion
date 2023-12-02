@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "factory_expansion:block/thermal/bright_dark/transition_variant_6"
+  }
+}

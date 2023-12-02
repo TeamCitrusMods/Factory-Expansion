@@ -3,7 +3,6 @@ package dev.teamcitrusmods.factory_expansion.datagen;
 import cofh.thermal.core.ThermalCore;
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import dev.teamcitrusmods.factory_expansion.block.ModBlocks;
-import dev.teamcitrusmods.factory_expansion.datagen.ModItemModelProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -12,8 +11,7 @@ import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static cofh.thermal.lib.common.ThermalIDs.ID_SLAG_BLOCK;
-import static cofh.thermal.lib.common.ThermalIDs.ID_SLAG_BRICKS;
+import static cofh.thermal.lib.common.ThermalIDs.*;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     private static final ExistingFileHelper.ResourceType MODEL = new ExistingFileHelper.ResourceType(PackType.CLIENT_RESOURCES, ".json", "models");
@@ -39,6 +37,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlockUncheckedWithItem(ModBlocks.SLAG_BRICKS_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_SLAG_BRICKS)), new ResourceLocation("thermal", "block/slag_bricks"));
         stairsBlockUncheckedWithItem(ModBlocks.SLAG_BRICKS_STAIRS.get(), new ResourceLocation("thermal", "block/slag_bricks"));
         wallBlockUncheckedWithItem(ModBlocks.SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/slag_bricks"));
+
+        slabBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BLOCK_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_RICH_SLAG_BLOCK)), new ResourceLocation("thermal", "block/rich_slag_block"));
+        stairsBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BLOCK_STAIRS.get(), new ResourceLocation("thermal", "block/rich_slag_block"));
+        wallBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_block"));
+
+        slabBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BRICKS_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_RICH_SLAG_BRICKS)), new ResourceLocation("thermal", "block/rich_slag_bricks"));
+        stairsBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BRICKS_STAIRS.get(), new ResourceLocation("thermal", "block/rich_slag_bricks"));
+        wallBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_bricks"));
 
         simpleBlockPathWithItem(ModBlocks.THERMAL_BRIGHT_PLATING.get(), "factory_expansion:block/thermal/bright/plating");
 

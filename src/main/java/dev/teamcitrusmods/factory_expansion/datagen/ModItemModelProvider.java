@@ -32,6 +32,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.SMILE_WALL.get(), ModBlocks.SMILE.get());
         wallItemUnchecked(ModBlocks.SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/slag_block"));
         wallItemUnchecked(ModBlocks.SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/slag_bricks"));
+        wallItemUnchecked(ModBlocks.RICH_SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_block"));
+        wallItemUnchecked(ModBlocks.RICH_SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_bricks"));
     }
 
 

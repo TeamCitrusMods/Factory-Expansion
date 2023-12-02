@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "factory_expansion:block/thermal/bright_dark/transition_variant_1"
+      },
+      {
+        "model": "factory_expansion:block/thermal/bright_dark/transition_variant_2"
+      },
+      {
+        "model": "factory_expansion:block/thermal/bright_dark/transition_variant_3"
+      },
+      {
+        "model": "factory_expansion:block/thermal/bright_dark/transition_variant_4"
+      },
+      {
+        "model": "factory_expansion:block/thermal/bright_dark/transition_variant_5"
+      },
+      {
+        "model": "factory_expansion:block/thermal/bright_dark/transition_variant_6"
+      }
+    ]
+  }
+}

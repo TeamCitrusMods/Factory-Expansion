@@ -18,5 +18,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WALLS).add(ModBlocks.SMILE_WALL.get());
         this.tag(BlockTags.WALLS).add(ModBlocks.SLAG_BLOCK_WALL.get());
         this.tag(BlockTags.WALLS).add(ModBlocks.SLAG_BRICKS_WALL.get());
+        this.tag(BlockTags.WALLS).add(ModBlocks.RICH_SLAG_BLOCK_WALL.get());
+        this.tag(BlockTags.WALLS).add(ModBlocks.RICH_SLAG_BRICKS_WALL.get());
     }
 }
