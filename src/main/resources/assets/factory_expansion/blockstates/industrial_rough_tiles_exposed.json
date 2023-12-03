@@ -1,18 +1,16 @@
 {
   "variants": {
-    "": [
-      {
+    "variation=1": {
         "model": "factory_expansion:block/industrial_rough_tiles/exposed_variant_1"
-      },
-      {
-        "model": "factory_expansion:block/industrial_rough_tiles/exposed_variant_2"
-      },
-      {
-        "model": "factory_expansion:block/industrial_rough_tiles/exposed_variant_3"
-      },
-      {
-        "model": "factory_expansion:block/industrial_rough_tiles/exposed_variant_4"
-      }
-    ]
+    },
+    "variation=2": {
+      "model": "factory_expansion:block/industrial_rough_tiles/exposed_variant_2"
+    },
+    "variation=3": {
+      "model": "factory_expansion:block/industrial_rough_tiles/exposed_variant_3"
+    },
+    "variation=4": {
+      "model": "factory_expansion:block/industrial_rough_tiles/exposed_variant_4"
+    }
   }
 }

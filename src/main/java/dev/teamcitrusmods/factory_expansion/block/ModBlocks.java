@@ -3,6 +3,7 @@ package dev.teamcitrusmods.factory_expansion.block;
 import cofh.thermal.core.ThermalCore;
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import dev.teamcitrusmods.factory_expansion.block.custom.FluxLampBlock;
+import dev.teamcitrusmods.factory_expansion.block.custom.BlastResultBlock;
 import dev.teamcitrusmods.factory_expansion.item.ModCreativeModeTab;
 import dev.teamcitrusmods.factory_expansion.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -62,16 +63,20 @@ public class ModBlocks {
     public static final RegistryObject<StairBlock> THERMAL_DARK_TILED_PLATING_STAIRS = registerBlock("thermal_dark_tiled_plating_stairs", () -> new StairBlock(() -> THERMAL_BRIGHT_TILED_PLATING.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<RotatedPillarBlock> THERMAL_DARK_PIPE = registerBlock("thermal_dark_pipe", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
-    public static final RegistryObject<Block> THERMAL_BRIGHT_DARK_TRANSITION = registerBlock("thermal_bright_dark_transition", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> THERMAL_BRIGHT_DARK_TRANSITION = registerBlock("thermal_bright_dark_transition", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
     public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK = registerBlock("mana_crystal_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK_ACTIVE = registerBlock("mana_crystal_block_active", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<Block> MANA_CRYSTAL_POLISHED = registerBlock("mana_crystal_polished", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<Block> MANA_CRYSTAL_POLISHED_ACTIVE = registerBlock("mana_crystal_polished_active", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
-    public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES = registerBlock("industrial_rough_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
-    public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES_EXPOSED = registerBlock("industrial_rough_tiles_exposed", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
-    public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES_WALL = registerBlock("industrial_rough_tiles_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES_WALL = registerBlock("industrial_rough_tiles_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<BlastResultBlock> INDUSTRIAL_ROUGH_TILES_EXPOSED = registerBlock("industrial_rough_tiles_exposed",
+            () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), ModBlocks.INDUSTRIAL_ROUGH_TILES_WALL.get(), 4, 1),
+            ModCreativeModeTab.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<BlastResultBlock> INDUSTRIAL_ROUGH_TILES = registerBlock("industrial_rough_tiles",
+            () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), ModBlocks.INDUSTRIAL_ROUGH_TILES_EXPOSED.get(), 1, 4),
+            ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
 
     // delete, not in final mod
