@@ -72,10 +72,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES_WALL = registerBlock("industrial_rough_tiles_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<BlastResultBlock> INDUSTRIAL_ROUGH_TILES_EXPOSED = registerBlock("industrial_rough_tiles_exposed",
-            () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), ModBlocks.INDUSTRIAL_ROUGH_TILES_WALL.get(), 4, 1),
+            () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), 4, ModBlocks.INDUSTRIAL_ROUGH_TILES_WALL.get()),
             ModCreativeModeTab.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<BlastResultBlock> INDUSTRIAL_ROUGH_TILES = registerBlock("industrial_rough_tiles",
-            () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), ModBlocks.INDUSTRIAL_ROUGH_TILES_EXPOSED.get(), 1, 4),
+            () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), 1, ModBlocks.INDUSTRIAL_ROUGH_TILES_EXPOSED.get()),
             ModCreativeModeTab.FACTORY_EXPANSION_TAB);
 
 
