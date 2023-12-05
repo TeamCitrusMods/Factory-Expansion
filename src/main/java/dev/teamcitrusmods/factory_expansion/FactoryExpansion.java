@@ -33,7 +33,6 @@ public class FactoryExpansion
     public static final String MODID = "factory_expansion";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final IntegerProperty VARIATION = IntegerProperty.create("variation", 1, 8);
 
     public FactoryExpansion()
     {
