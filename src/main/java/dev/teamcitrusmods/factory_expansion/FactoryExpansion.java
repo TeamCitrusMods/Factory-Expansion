@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +32,8 @@ public class FactoryExpansion
 {
     public static final String MODID = "factory_expansion";
     public static final Logger LOGGER = LogUtils.getLogger();
+
+
     public FactoryExpansion()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
