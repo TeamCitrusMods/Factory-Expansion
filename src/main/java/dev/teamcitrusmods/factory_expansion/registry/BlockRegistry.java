@@ -4,6 +4,7 @@ import cofh.thermal.core.ThermalCore;
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import dev.teamcitrusmods.factory_expansion.block.FluxLampBlock;
 import dev.teamcitrusmods.factory_expansion.block.BlastResultBlock;
+import dev.teamcitrusmods.factory_expansion.block.PillarBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -71,6 +72,13 @@ public class BlockRegistry {
             () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), 1, BlockRegistry.INDUSTRIAL_ROUGH_TILES_EXPOSED.get()),
             CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
+
+
+    public static final RegistryObject<FenceBlock> BLAST_WALL_EXPOSED = registerBlock("blast_wall_exposed",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<PillarBlock> DEFAULT_PILLAR = registerBlock("default_pillar",
+            () -> new PillarBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
     // --- CUSTOM SHAPED BLOCKS
 

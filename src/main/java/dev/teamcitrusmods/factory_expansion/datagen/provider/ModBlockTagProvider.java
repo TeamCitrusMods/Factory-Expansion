@@ -19,5 +19,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.WALLS).add(BlockRegistry.SLAG_BRICKS_WALL.get());
         this.tag(BlockTags.WALLS).add(BlockRegistry.RICH_SLAG_BLOCK_WALL.get());
         this.tag(BlockTags.WALLS).add(BlockRegistry.RICH_SLAG_BRICKS_WALL.get());
+
+        this.tag(BlockTags.FENCES).add(BlockRegistry.BLAST_WALL_EXPOSED.get());
     }
 }

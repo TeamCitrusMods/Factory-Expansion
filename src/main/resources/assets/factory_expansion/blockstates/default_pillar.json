@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "section=0": {
+      "model": "factory_expansion:block/default_pillar/section_0"
+    },
+    "section=1": {
+      "model": "factory_expansion:block/default_pillar/section_0"
+    },
+    "section=2": {
+      "model": "factory_expansion:block/default_pillar/section_0"
+    },
+    "section=3": {
+      "model": "factory_expansion:block/default_pillar/section_0"
+    }
+  }
+}
