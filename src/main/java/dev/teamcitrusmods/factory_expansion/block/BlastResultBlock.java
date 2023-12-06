@@ -1,4 +1,4 @@
-package dev.teamcitrusmods.factory_expansion.block.custom;
+package dev.teamcitrusmods.factory_expansion.block;
 
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import net.minecraft.core.BlockPos;
@@ -13,8 +13,6 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Random;
 
 public class BlastResultBlock extends Block {
 
@@ -53,10 +51,9 @@ public class BlastResultBlock extends Block {
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         RandomSource ran = pContext.getLevel().random;
-        long dTime = pContext.getLevel().getGameTime() * 100;
+        long dTime = pContext.getLevel().getGameTime() / 10 * 1000;
         ran.setSeed(dTime);
         int n = ran.nextInt(maxVariants);
-        FactoryExpansion.LOGGER.debug("---level "+pContext.getLevel() + " value "+ n +" daytime "+ dTime);
         return this.defaultBlockState().setValue(VARIANT, n);
     }
 
@@ -66,7 +63,6 @@ public class BlastResultBlock extends Block {
         //check if result block is a blast result block. If so, randomize the state
         if(result instanceof BlastResultBlock resultBlock) {
             int n = level.random.nextInt(resultBlock.getMaxVariants()); //get the max variants of our result block
-            FactoryExpansion.LOGGER.debug("---level "+level + " value "+ n );
             newState = newState.setValue(VARIANT, n); //you have to reassign values for blockstates because idk.
         }
         //set block

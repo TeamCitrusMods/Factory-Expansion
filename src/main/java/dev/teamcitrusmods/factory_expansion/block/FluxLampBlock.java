@@ -1,4 +1,4 @@
-package dev.teamcitrusmods.factory_expansion.block.custom;
+package dev.teamcitrusmods.factory_expansion.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

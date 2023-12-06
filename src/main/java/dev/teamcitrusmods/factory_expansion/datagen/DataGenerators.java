@@ -1,6 +1,10 @@
 package dev.teamcitrusmods.factory_expansion.datagen;
 
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
+import dev.teamcitrusmods.factory_expansion.datagen.provider.ModBlockStateProvider;
+import dev.teamcitrusmods.factory_expansion.datagen.provider.ModBlockTagProvider;
+import dev.teamcitrusmods.factory_expansion.datagen.provider.ModItemModelProvider;
+import dev.teamcitrusmods.factory_expansion.datagen.provider.ModRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -25,7 +29,7 @@ public class DataGenerators {
         // generator.addProvider(event.includeClient(), lootTableProvider);
         generator.addProvider(event.includeClient(), recipeProvider);
 
-        BlockTagsProvider blockTags = new ModBlockTagGenerator(generator, file);
+        BlockTagsProvider blockTags = new ModBlockTagProvider(generator, file);
         generator.addProvider(event.includeClient(), blockTags);
     }
 }

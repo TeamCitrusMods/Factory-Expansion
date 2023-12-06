@@ -1,8 +1,8 @@
-package dev.teamcitrusmods.factory_expansion.datagen;
+package dev.teamcitrusmods.factory_expansion.datagen.provider;
 
 import cofh.thermal.core.ThermalCore;
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
-import dev.teamcitrusmods.factory_expansion.block.ModBlocks;
+import dev.teamcitrusmods.factory_expansion.registry.BlockRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -24,50 +24,41 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        // delete these, not going to be in the final mod
-        simpleBlockWithItem(ModBlocks.SMILE.get());
-        slabBlockWithItem(ModBlocks.SMILE_SLAB.get(), ModBlocks.SMILE.get());
-        stairsBlockWithItem(ModBlocks.SMILE_STAIRS.get(), ModBlocks.SMILE.get());
-        wallBlockWithItem(ModBlocks.SMILE_WALL.get(), ModBlocks.SMILE.get());
 
-        slabBlockUncheckedWithItem(ModBlocks.SLAG_BLOCK_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_SLAG_BLOCK)), new ResourceLocation("thermal", "block/slag_block"));
-        stairsBlockUncheckedWithItem(ModBlocks.SLAG_BLOCK_STAIRS.get(), new ResourceLocation("thermal", "block/slag_block"));
-        wallBlockUncheckedWithItem(ModBlocks.SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/slag_block"));
+        slabBlockUncheckedWithItem(BlockRegistry.SLAG_BLOCK_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_SLAG_BLOCK)), new ResourceLocation("thermal", "block/slag_block"));
+        stairsBlockUncheckedWithItem(BlockRegistry.SLAG_BLOCK_STAIRS.get(), new ResourceLocation("thermal", "block/slag_block"));
+        wallBlockUncheckedWithItem(BlockRegistry.SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/slag_block"));
 
-        slabBlockUncheckedWithItem(ModBlocks.SLAG_BRICKS_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_SLAG_BRICKS)), new ResourceLocation("thermal", "block/slag_bricks"));
-        stairsBlockUncheckedWithItem(ModBlocks.SLAG_BRICKS_STAIRS.get(), new ResourceLocation("thermal", "block/slag_bricks"));
-        wallBlockUncheckedWithItem(ModBlocks.SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/slag_bricks"));
+        slabBlockUncheckedWithItem(BlockRegistry.SLAG_BRICKS_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_SLAG_BRICKS)), new ResourceLocation("thermal", "block/slag_bricks"));
+        stairsBlockUncheckedWithItem(BlockRegistry.SLAG_BRICKS_STAIRS.get(), new ResourceLocation("thermal", "block/slag_bricks"));
+        wallBlockUncheckedWithItem(BlockRegistry.SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/slag_bricks"));
 
-        slabBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BLOCK_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_RICH_SLAG_BLOCK)), new ResourceLocation("thermal", "block/rich_slag_block"));
-        stairsBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BLOCK_STAIRS.get(), new ResourceLocation("thermal", "block/rich_slag_block"));
-        wallBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_block"));
+        slabBlockUncheckedWithItem(BlockRegistry.RICH_SLAG_BLOCK_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_RICH_SLAG_BLOCK)), new ResourceLocation("thermal", "block/rich_slag_block"));
+        stairsBlockUncheckedWithItem(BlockRegistry.RICH_SLAG_BLOCK_STAIRS.get(), new ResourceLocation("thermal", "block/rich_slag_block"));
+        wallBlockUncheckedWithItem(BlockRegistry.RICH_SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_block"));
 
-        slabBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BRICKS_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_RICH_SLAG_BRICKS)), new ResourceLocation("thermal", "block/rich_slag_bricks"));
-        stairsBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BRICKS_STAIRS.get(), new ResourceLocation("thermal", "block/rich_slag_bricks"));
-        wallBlockUncheckedWithItem(ModBlocks.RICH_SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_bricks"));
+        slabBlockUncheckedWithItem(BlockRegistry.RICH_SLAG_BRICKS_SLAB.get(), blockTexture(ThermalCore.BLOCKS.get(ID_RICH_SLAG_BRICKS)), new ResourceLocation("thermal", "block/rich_slag_bricks"));
+        stairsBlockUncheckedWithItem(BlockRegistry.RICH_SLAG_BRICKS_STAIRS.get(), new ResourceLocation("thermal", "block/rich_slag_bricks"));
+        wallBlockUncheckedWithItem(BlockRegistry.RICH_SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_bricks"));
 
-        simpleBlockPathWithItem(ModBlocks.THERMAL_BRIGHT_PLATING.get(), "factory_expansion:block/thermal/bright/plating");
+        simpleBlockPathWithItem(BlockRegistry.THERMAL_BRIGHT_PLATING.get(), "factory_expansion:block/thermal/bright/plating");
 
-        axisBlockPathWithItem(ModBlocks.THERMAL_BRIGHT_HALVED_PLATING.get(), "factory_expansion:block/thermal/bright/halved_plating", "factory_expansion:block/thermal/bright/plating");
-        slabBlockPathWithItem(ModBlocks.THERMAL_BRIGHT_HALVED_PLATING_SLAB.get(), ModBlocks.THERMAL_BRIGHT_HALVED_PLATING.get(), "factory_expansion:block/thermal/bright/halved_plating", "factory_expansion:block/thermal/bright/plating", "factory_expansion:block/thermal/bright/plating");
+        axisBlockPathWithItem(BlockRegistry.THERMAL_BRIGHT_HALVED_PLATING.get(), "factory_expansion:block/thermal/bright/halved_plating", "factory_expansion:block/thermal/bright/plating");
+        slabBlockPathWithItem(BlockRegistry.THERMAL_BRIGHT_HALVED_PLATING_SLAB.get(), BlockRegistry.THERMAL_BRIGHT_HALVED_PLATING.get(), "factory_expansion:block/thermal/bright/halved_plating", "factory_expansion:block/thermal/bright/plating", "factory_expansion:block/thermal/bright/plating");
 
-        simpleBlockPathWithItem(ModBlocks.THERMAL_BRIGHT_TILED_PLATING.get(), "factory_expansion:block/thermal/bright/tiled_plating");
-        slabBlockPathWithItem(ModBlocks.THERMAL_BRIGHT_TILED_PLATING_SLAB.get(), ModBlocks.THERMAL_BRIGHT_TILED_PLATING.get(), "factory_expansion:block/thermal/bright/tiled_plating", "factory_expansion:block/thermal/bright/tiled_plating", "factory_expansion:block/thermal/bright/tiled_plating");
-        stairsBlockPathWithItem(ModBlocks.THERMAL_BRIGHT_TILED_PLATING_STAIRS.get(), "factory_expansion:block/thermal/bright/tiled_plating");
+        simpleBlockPathWithItem(BlockRegistry.THERMAL_BRIGHT_TILED_PLATING.get(), "factory_expansion:block/thermal/bright/tiled_plating");
+        slabBlockPathWithItem(BlockRegistry.THERMAL_BRIGHT_TILED_PLATING_SLAB.get(), BlockRegistry.THERMAL_BRIGHT_TILED_PLATING.get(), "factory_expansion:block/thermal/bright/tiled_plating", "factory_expansion:block/thermal/bright/tiled_plating", "factory_expansion:block/thermal/bright/tiled_plating");
+        stairsBlockPathWithItem(BlockRegistry.THERMAL_BRIGHT_TILED_PLATING_STAIRS.get(), "factory_expansion:block/thermal/bright/tiled_plating");
 
-        simpleBlockPathWithItem(ModBlocks.THERMAL_DARK_TILED_PLATING.get(), "factory_expansion:block/thermal/dark/tiled_plating");
-        slabBlockPathWithItem(ModBlocks.THERMAL_DARK_TILED_PLATING_SLAB.get(), ModBlocks.THERMAL_BRIGHT_TILED_PLATING.get(), "factory_expansion:block/thermal/dark/tiled_plating", "factory_expansion:block/thermal/dark/tiled_plating", "factory_expansion:block/thermal/dark/tiled_plating");
-        stairsBlockPathWithItem(ModBlocks.THERMAL_DARK_TILED_PLATING_STAIRS.get(), "factory_expansion:block/thermal/dark/tiled_plating");
+        simpleBlockPathWithItem(BlockRegistry.THERMAL_DARK_TILED_PLATING.get(), "factory_expansion:block/thermal/dark/tiled_plating");
+        slabBlockPathWithItem(BlockRegistry.THERMAL_DARK_TILED_PLATING_SLAB.get(), BlockRegistry.THERMAL_BRIGHT_TILED_PLATING.get(), "factory_expansion:block/thermal/dark/tiled_plating", "factory_expansion:block/thermal/dark/tiled_plating", "factory_expansion:block/thermal/dark/tiled_plating");
+        stairsBlockPathWithItem(BlockRegistry.THERMAL_DARK_TILED_PLATING_STAIRS.get(), "factory_expansion:block/thermal/dark/tiled_plating");
 
-        axisBlockPathWithItem(ModBlocks.THERMAL_DARK_PIPE.get(), "factory_expansion:block/thermal/dark/pipe_side", "factory_expansion:block/thermal/dark/pipe_end");
+        axisBlockPathWithItem(BlockRegistry.THERMAL_DARK_PIPE.get(), "factory_expansion:block/thermal/dark/pipe_side", "factory_expansion:block/thermal/dark/pipe_end");
 
-        simpleBlockPathWithItem(ModBlocks.MANA_CRYSTAL_BLOCK.get(), "factory_expansion:block/mana_crystal/block");
-        simpleBlockPathWithItem(ModBlocks.MANA_CRYSTAL_BLOCK_ACTIVE.get(), "factory_expansion:block/mana_crystal/block_active");
-        simpleBlockPathWithItem(ModBlocks.MANA_CRYSTAL_POLISHED.get(), "factory_expansion:block/mana_crystal/polished");
-        simpleBlockPathWithItem(ModBlocks.MANA_CRYSTAL_POLISHED_ACTIVE.get(), "factory_expansion:block/mana_crystal/polished_active");
 
-        simpleBlockPathWithItem(ModBlocks.INDUSTRIAL_ROUGH_TILES.get(), "factory_expansion:block/industrial/rough_tiles/rough_tiles");
-        simpleBlockPathWithItem(ModBlocks.INDUSTRIAL_ROUGH_TILES_WALL.get(), "factory_expansion:block/industrial/rough_tiles/exposed_wall");
+        //simpleBlockPathWithItem(BlockRegistry.INDUSTRIAL_ROUGH_TILES.get(), "factory_expansion:block/industrial/rough_tiles/rough_tiles");
+        //simpleBlockPathWithItem(BlockRegistry.INDUSTRIAL_ROUGH_TILES_WALL.get(), "factory_expansion:block/industrial/rough_tiles/exposed_wall");
 
 
 

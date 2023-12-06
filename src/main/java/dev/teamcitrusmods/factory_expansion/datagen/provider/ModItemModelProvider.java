@@ -1,8 +1,8 @@
-package dev.teamcitrusmods.factory_expansion.datagen;
+package dev.teamcitrusmods.factory_expansion.datagen.provider;
 
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
-import dev.teamcitrusmods.factory_expansion.block.ModBlocks;
-import dev.teamcitrusmods.factory_expansion.item.ModItems;
+import dev.teamcitrusmods.factory_expansion.registry.BlockRegistry;
+import dev.teamcitrusmods.factory_expansion.registry.ItemRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -25,15 +25,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     public void registerModels() {
-        simpleItem(ModItems.MANA_CRYSTAL);
 
-        simpleItem(ModItems.MANA_CRYSTAL_ACTIVE);
+        wallItemUnchecked(BlockRegistry.SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/slag_block"));
+        wallItemUnchecked(BlockRegistry.SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/slag_bricks"));
+        wallItemUnchecked(BlockRegistry.RICH_SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_block"));
+        wallItemUnchecked(BlockRegistry.RICH_SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_bricks"));
 
-        wallItem(ModBlocks.SMILE_WALL.get(), ModBlocks.SMILE.get());
-        wallItemUnchecked(ModBlocks.SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/slag_block"));
-        wallItemUnchecked(ModBlocks.SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/slag_bricks"));
-        wallItemUnchecked(ModBlocks.RICH_SLAG_BLOCK_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_block"));
-        wallItemUnchecked(ModBlocks.RICH_SLAG_BRICKS_WALL.get(), new ResourceLocation("thermal", "block/rich_slag_bricks"));
     }
 
 
