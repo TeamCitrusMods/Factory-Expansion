@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "factory_expansion:block/industrial/rough_tiles/exposed_variant_2"
-  }
-}
