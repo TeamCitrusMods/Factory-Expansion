@@ -2,6 +2,7 @@ package dev.teamcitrusmods.factory_expansion.block.custom;
 
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -11,8 +12,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
 import java.util.Random;
 
 public class BlastResultBlock extends Block {
@@ -30,10 +31,32 @@ public class BlastResultBlock extends Block {
         this.maxVariants = maxVariants;
         this.registerDefaultState(this.stateDefinition.any().setValue(VARIANT, 0)); //starting at 0 instead of 1 is generally better practice
     }
-
+/*
+    private int saveMe = -1;
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        int n = context.getLevel().random.nextInt(maxVariants);
+        RandomSource r = context.getLevel().random;
+        int n;
+        if(saveMe < 0) { //first time method is called
+            n = r.nextInt(maxVariants);
+            saveMe = n; //so it's gonna be >= 0
+        } else { //second time
+            n = saveMe;
+            saveMe = -1;
+        }
+        FactoryExpansion.LOGGER.debug("---level "+context.getLevel() + " value "+ n +" saveme "+ saveMe);
+        return this.defaultBlockState().setValue(VARIANT, n);
+    }
+*/
+
+    @Nullable
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext pContext) {
+        RandomSource ran = pContext.getLevel().random;
+        long dTime = pContext.getLevel().getGameTime() * 100;
+        ran.setSeed(dTime);
+        int n = ran.nextInt(maxVariants);
+        FactoryExpansion.LOGGER.debug("---level "+pContext.getLevel() + " value "+ n +" daytime "+ dTime);
         return this.defaultBlockState().setValue(VARIANT, n);
     }
 
@@ -43,6 +66,7 @@ public class BlastResultBlock extends Block {
         //check if result block is a blast result block. If so, randomize the state
         if(result instanceof BlastResultBlock resultBlock) {
             int n = level.random.nextInt(resultBlock.getMaxVariants()); //get the max variants of our result block
+            FactoryExpansion.LOGGER.debug("---level "+level + " value "+ n );
             newState = newState.setValue(VARIANT, n); //you have to reassign values for blockstates because idk.
         }
         //set block

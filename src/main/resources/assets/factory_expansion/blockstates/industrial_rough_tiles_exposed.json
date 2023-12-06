@@ -11,6 +11,9 @@
     },
     "variant=3": {
       "model": "factory_expansion:block/industrial_rough_tiles/exposed_variant_4"
+    },
+    "variation=8": {
+      "model": "factory_expansion:block/industrial_rough_tiles_wall"
     }
   }
 }
