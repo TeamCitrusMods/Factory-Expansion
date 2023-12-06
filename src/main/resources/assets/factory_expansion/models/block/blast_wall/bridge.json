@@ -1,0 +1,22 @@
+{
+	"credit": "an ElysiaSilly creation :D",
+	"textures": {
+		"0": "factory_expansion:block/blast_wall/blast_wall_end_alt",
+		"1": "factory_expansion:block/blast_wall/blast_wall_end",
+		"particle": "factory_expansion:block/blast_wall/blast_wall_end_alt"
+	},
+	"elements": [
+		{
+			"name": "inside",
+			"from": [2, 0, 0],
+			"to": [14, 16, 2],
+			"faces": {
+				"north": {"uv": [2, 0, 14, 16], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [0, 0, 2, 16], "texture": "#1", "cullface": "east"},
+				"west": {"uv": [0, 0, 2, 16], "texture": "#1", "cullface": "west"},
+				"up": {"uv": [2, 0, 14, 2], "texture": "#1", "cullface": "up"},
+				"down": {"uv": [2, 0, 14, 2], "texture": "#1", "cullface": "down"}
+			}
+		}
+	]
+}
