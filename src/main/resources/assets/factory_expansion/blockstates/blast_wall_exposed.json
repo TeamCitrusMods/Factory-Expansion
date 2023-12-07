@@ -2,7 +2,43 @@
   "multipart": [
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/frame"
+        "model": "factory_expansion:block/blast_wall/frame_culled",
+        "uvlock": true
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/frame_culled",
+        "y": 90
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/frame_culled",
+        "y": 180
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/frame_culled",
+        "y": 270
+      },
+      "when": {
+        "west": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/base"
       }
     },
     {
