@@ -56,9 +56,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         axisBlockPathWithItem(BlockRegistry.THERMAL_DARK_PIPE.get(), "factory_expansion:block/thermal/dark/pipe_side", "factory_expansion:block/thermal/dark/pipe_end");
 
-
-        //simpleBlockPathWithItem(BlockRegistry.INDUSTRIAL_ROUGH_TILES.get(), "factory_expansion:block/industrial/rough_tiles/rough_tiles");
-        //simpleBlockPathWithItem(BlockRegistry.INDUSTRIAL_ROUGH_TILES_WALL.get(), "factory_expansion:block/industrial/rough_tiles/exposed_wall");
+        simpleBlockWithItem(BlockRegistry.SANDED_LEAD_BLOCK.get());
+        simpleBlockPathWithItem(BlockRegistry.TREATED_PLANKS.get(), "factory_expansion:block/wood/treated_wood");
+        simpleBlockPathWithItem(BlockRegistry.TREATED_ENCASED_PLANKS.get(), "factory_expansion:block/wood/encased_treated_wood");
+        simpleBlockPathWithItem(BlockRegistry.CLINKER_BRICKS.get(), "factory_expansion:block/bricks/clinker_bricks");
+        simpleBlockPathWithItem(BlockRegistry.MIXED_CLINKER_BRICKS.get(), "factory_expansion:block/bricks/mixed_clinker_bricks");
+        simpleBlockPathWithItem(BlockRegistry.SOULSAND_BRICKS.get(), "factory_expansion:block/bricks/soulsand_bricks");
+        simpleBlockPathWithItem(BlockRegistry.SOULSAND_BRICKS_EMPTY.get(), "factory_expansion:block/bricks/soulsand_bricks_empty");
+        simpleBlockPathWithItem(BlockRegistry.SOULSAND_BRICKS_LEFT.get(), "factory_expansion:block/bricks/soulsand_bricks_left");
+        simpleBlockPathWithItem(BlockRegistry.SOULSAND_BRICKS_RIGHT.get(), "factory_expansion:block/bricks/soulsand_bricks_right");
+        simpleBlockPathWithItem(BlockRegistry.WARM_CLINKER_BRICKS.get(), "factory_expansion:block/bricks/warm_clinker_bricks");
 
 
 

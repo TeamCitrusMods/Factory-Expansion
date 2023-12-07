@@ -62,8 +62,23 @@ public class BlockRegistry {
     public static final RegistryObject<StairBlock> THERMAL_DARK_TILED_PLATING_STAIRS = registerBlock("thermal_dark_tiled_plating_stairs", () -> new StairBlock(() -> THERMAL_BRIGHT_TILED_PLATING.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<RotatedPillarBlock> THERMAL_DARK_PIPE = registerBlock("thermal_dark_pipe", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
+    // this one needs fixes
     public static final RegistryObject<Block> THERMAL_BRIGHT_DARK_TRANSITION = registerBlock("thermal_bright_dark_transition", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> SANDED_LEAD_BLOCK = registerBlock("sanded_lead_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
+    public static final RegistryObject<Block> TREATED_PLANKS = registerBlock("treated_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> TREATED_ENCASED_PLANKS = registerBlock("treated_encased_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
+    // these need custom behaviour
+    public static final RegistryObject<Block> CLINKER_BRICKS = registerBlock("clinker_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> MIXED_CLINKER_BRICKS = registerBlock("mixed_clinker_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> SOULSAND_BRICKS = registerBlock("soulsand_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> SOULSAND_BRICKS_EMPTY = registerBlock("soulsand_bricks_empty", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> SOULSAND_BRICKS_LEFT = registerBlock("soulsand_bricks_left", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> SOULSAND_BRICKS_RIGHT = registerBlock("soulsand_bricks_right", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<Block> WARM_CLINKER_BRICKS = registerBlock("warm_clinker_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
+    // tile walls are gonna get a rework
     public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES_WALL = registerBlock("industrial_rough_tiles_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<BlastResultBlock> INDUSTRIAL_ROUGH_TILES_EXPOSED = registerBlock("industrial_rough_tiles_exposed",
             () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), 4, BlockRegistry.INDUSTRIAL_ROUGH_TILES_WALL.get()),

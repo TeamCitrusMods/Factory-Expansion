@@ -1,3 +1,42 @@
 {
-  "item.factory_expansion.faux_coil": "Faux Coil"
+  "item.factory_expansion.fluxbrush": "FluxBrush",
+
+  "itemGroup.factory_expansion_tab": "Thermal: Factory Needs Expansion",
+
+  "block.factory_expansion.slag_block_slab": "Slag Block Slab",
+  "block.factory_expansion.slag_block_stairs": "Slag Block Stairs",
+  "block.factory_expansion.slag_block_wall": "Slag Block Wall",
+  "block.factory_expansion.slag_bricks_slab": "Slag Bricks Slab",
+  "block.factory_expansion.slag_bricks_stairs": "Slag Bricks Stairs",
+  "block.factory_expansion.slag_bricks_wall": "Slag Bricks Wall",
+  "block.factory_expansion.rich_slag_block_slab": "Rich Slag Block Slab",
+  "block.factory_expansion.rich_slag_block_stairs": "Rich Slag Block Stairs",
+  "block.factory_expansion.rich_slag_block_wall": "Rich Slag Block Wall",
+  "block.factory_expansion.rich_slag_bricks_slab": "Rich Slag Bricks Slab",
+  "block.factory_expansion.rich_slag_bricks_stairs": "Rich Slag Bricks Stairs",
+  "block.factory_expansion.rich_slag_bricks_wall": "Rich Slag Bricks Wall",
+  "block.factory_expansion.thermal_bright_plating": "Thermal Bright Plating",
+  "block.factory_expansion.thermal_bright_halved_plating": "Thermal Bright Halved Plating",
+  "block.factory_expansion.thermal_bright_halved_plating_slab": "Thermal Bright Halved Plating Slab",
+  "block.factory_expansion.thermal_bright_tiled_plating": "Thermal Bright Tiled Plating",
+  "block.factory_expansion.thermal_bright_tiled_plating_slab": "Thermal Bright Tiled Plating Slab",
+  "block.factory_expansion.thermal_bright_tiled_plating_stairs": "Thermal Bright Tiled Plating Stairs",
+  "block.factory_expansion.thermal_dark_tiled_plating": "Thermal Dark Tiled Plating",
+  "block.factory_expansion.thermal_dark_tiled_plating_slab": "Thermal Dark Tiled Plating Slab",
+  "block.factory_expansion.thermal_dark_tiled_plating_stairs": "Thermal Dark Tiled Plating Stairs",
+  "block.factory_expansion.thermal_dark_pipe": "Thermal Dark Pipe",
+  "block.factory_expansion.thermal_bright_dark_transition": "Thermal Bright Dark Transition",
+  "block.factory_expansion.sanded_lead_block": "Sanded Lead Block",
+  "block.factory_expansion.treated_planks": "Treated Planks",
+  "block.factory_expansion.treated_encased_planks": "Treated Encased Planks",
+  "block.factory_expansion.clinker_bricks": "Clinker Bricks",
+  "block.factory_expansion.mixed_clinker_bricks": "Mixed Clinker Bricks",
+  "block.factory_expansion.soulsand_bricks": "Soulsand Bricks",
+  "block.factory_expansion.soulsand_bricks_empty": "Empty Soulsand Bricks",
+  "block.factory_expansion.soulsand_bricks_left": "Left Soulsand Bricks",
+  "block.factory_expansion.soulsand_bricks_right": "Right Soulsand Bricks",
+  "block.factory_expansion.warm_clinker_bricks": "Warm Clinker Bricks",
+
+  "block.factory_expansion.flux_lamp": "Flux Lamp",
+  "block.factory_expansion.flux_lamp_inverted": "Inverted Flux Lamp"
 }
