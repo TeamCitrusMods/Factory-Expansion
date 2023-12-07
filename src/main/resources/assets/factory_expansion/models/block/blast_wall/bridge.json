@@ -1,21 +1,22 @@
 {
 	"credit": "an ElysiaSilly creation :D",
 	"textures": {
-		"0": "factory_expansion:block/blast_wall/blast_wall_end_alt",
-		"1": "factory_expansion:block/blast_wall/blast_wall_end",
-		"particle": "factory_expansion:block/blast_wall/blast_wall_end_alt"
+		"particle": "factory_expansion:block/blast_wall/blast_wall_side_alt",
+		"side": "factory_expansion:block/blast_wall/blast_wall_side_alt",
+		"end": "factory_expansion:block/blast_wall/blast_wall_end"
 	},
 	"elements": [
 		{
-			"name": "inside",
-			"from": [2, 0, 0],
-			"to": [14, 16, 2],
+			"name": "bridge",
+			"from": [14, 0, 2],
+			"to": [16, 16, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [19, 8, 1]},
 			"faces": {
-				"north": {"uv": [2, 0, 14, 16], "texture": "#0", "cullface": "north"},
-				"east": {"uv": [0, 0, 2, 16], "texture": "#1", "cullface": "east"},
-				"west": {"uv": [0, 0, 2, 16], "texture": "#1", "cullface": "west"},
-				"up": {"uv": [2, 0, 14, 2], "texture": "#1", "cullface": "up"},
-				"down": {"uv": [2, 0, 14, 2], "texture": "#1", "cullface": "down"}
+				"north": {"uv": [0, 0, 2, 16], "texture": "#side"},
+				"east": {"uv": [2, 0, 14, 16], "texture": "#side", "cullface": "east"},
+				"south": {"uv": [0, 0, 2, 16], "texture": "#side"},
+				"up": {"uv": [2, 0, 14, 2], "rotation": 90, "texture": "#end", "cullface": "up"},
+				"down": {"uv": [2, 0, 14, 2], "rotation": 270, "texture": "#end", "cullface": "down"}
 			}
 		}
 	]

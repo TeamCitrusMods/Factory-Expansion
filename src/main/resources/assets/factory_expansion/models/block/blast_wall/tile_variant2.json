@@ -1,0 +1,6 @@
+{
+  "parent": "factory_expansion:parent/blast_wall/tile",
+  "textures": {
+    "texture": "factory_expansion:block/blast_wall/damaged_variant2"
+  }
+}
