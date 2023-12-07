@@ -104,6 +104,10 @@ public class BlastwallBlock extends Block {
 
     @Override
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block bock, BlockPos fromPos, boolean isMoving) {
+        if(level.isClientSide) {
+            return;
+        }
+
         boolean[] setSides = checkSides(level, pos);
         BlockState newState = this.defaultBlockState();
         newState = newState

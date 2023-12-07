@@ -31,6 +31,10 @@ public class PillarBlock extends Block {
 
     @Override
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
+        if(level.isClientSide()){
+            return;
+        }
+
         BlockState above = level.getBlockState(pos.above());
         BlockState below = level.getBlockState(pos.below());
         int sec = checkPillar(above.getBlock(), below.getBlock());
