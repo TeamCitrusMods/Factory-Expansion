@@ -4,6 +4,7 @@
 		"particle": "factory_expansion:block/blast_wall/blast_wall_side",
 		"side": "factory_expansion:block/blast_wall/blast_wall_side"
 	},
+	"render_type": "cutout",
 	"elements": [
 		{
 			"name": "bar",

@@ -1,10 +1,11 @@
 {
 	"credit": "an ElysiaSilly creation :D",
 	"textures": {
-		"particle": "#texture",
 		"side": "factory_expansion:block/blast_wall/blast_wall_side",
+		"particle": "#texture",
 		"tile": "#texture"
 	},
+	"render_type": "cutout",
 	"elements": [
 		{
 			"name": "bar",
@@ -36,8 +37,8 @@
 			"to": [16, 16, 0],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 6]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#tile", "cullface": "east"},
-				"south": {"uv": [16, 0, 0, 16], "texture": "#tile", "cullface": "east"}
+				"north": {"uv": [0, 0, 16, 16], "texture": "#tile", "cullface": "north"},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#tile", "cullface": "north"}
 			}
 		}
 	]

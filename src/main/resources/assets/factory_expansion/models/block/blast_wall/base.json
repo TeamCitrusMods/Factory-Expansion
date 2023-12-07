@@ -5,6 +5,7 @@
 		"side": "factory_expansion:block/blast_wall/blast_wall_side",
 		"end": "factory_expansion:block/blast_wall/blast_wall_end"
 	},
+	"render_type": "cutout",
 	"elements": [
 		{
 			"name": "base",
