@@ -1,0 +1,88 @@
+{
+	"credit": "an ElysiaSilly creation :D",
+	"textures": {
+		"base_bottom": "#base_bottom",
+		"lights_bottom": "#lights_bottom",
+		"flux_strip": "factory_expansion:block/integral_component/flux_strip",
+		"base_top": "#base_top",
+		"lights_top": "#lights_top",
+		"particle": "#base_bottom"
+	},
+	"render_type": "cutout",
+	"elements": [
+		{
+			"name": "base_bottom",
+			"from": [0, 0, 0],
+			"to": [16, 8, 16],
+			"faces": {
+				"north": {"uv": [8, 4, 16, 8], "texture": "#base_bottom", "cullface": "north"},
+				"east": {"uv": [8, 8, 16, 12], "texture": "#base_bottom", "cullface": "east"},
+				"south": {"uv": [8, 4, 16, 8], "texture": "#base_bottom", "cullface": "south"},
+				"west": {"uv": [8, 0, 16, 4], "texture": "#base_bottom", "cullface": "west"},
+				"down": {"uv": [0, 0, 8, 8], "texture": "#base_bottom", "cullface": "down"}
+			}
+		},
+		{
+			"name": "base_top",
+			"from": [0, 8, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [8, 4, 16, 8], "texture": "#base_top", "cullface": "north"},
+				"east": {"uv": [8, 8, 16, 12], "texture": "#base_top", "cullface": "east"},
+				"south": {"uv": [8, 4, 16, 8], "texture": "#base_top", "cullface": "south"},
+				"west": {"uv": [8, 0, 16, 4], "texture": "#base_top", "cullface": "west"},
+				"up": {"uv": [0, 0, 8, 8], "texture": "#base_top", "cullface": "up"}
+			}
+		},
+		{
+			"name": "lights_bottom",
+			"from": [0, 0, 0],
+			"to": [16, 8, 16],
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#lights_bottom", "cullface": "north", "emissivity": 15 },
+				"south": {"uv": [0, 8, 16, 16], "texture": "#lights_bottom", "cullface": "south", "emissivity": 15 }
+			}
+		},
+		{
+			"name": "lights_top",
+			"from": [0, 8, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#lights_top", "cullface": "north", "emissivity": 15 },
+				"south": {"uv": [0, 8, 16, 16], "texture": "#lights_top", "cullface": "south", "emissivity": 15 }
+			}
+		},
+		{
+			"name": "flux_strip",
+			"from": [11, 0, 6],
+			"to": [16, 16, 10],
+			"faces": {
+				"east": {"uv": [0, 0, 4, 16], "texture": "#flux_strip", "cullface": "east", "emissivity": 15 },
+				"up": {"uv": [12, 11, 16, 16], "texture": "#flux_strip", "cullface": "up", "emissivity": 15 },
+				"down": {"uv": [12, 11, 16, 16], "texture": "#flux_strip", "cullface": "down", "emissivity": 15 }
+			}
+		},
+		{
+			"name": "inside_bottom",
+			"from": [10, 8, 10],
+			"to": [6, 0, 6],
+			"faces": {
+				"north": {"uv": [6, 12, 8, 8], "texture": "#base_bottom"},
+				"east": {"uv": [6, 12, 8, 8], "texture": "#base_bottom"},
+				"south": {"uv": [6, 12, 8, 8], "texture": "#base_bottom"},
+				"west": {"uv": [6, 12, 8, 8], "texture": "#base_bottom"}
+			}
+		},
+		{
+			"name": "inside_top",
+			"from": [10, 16, 10],
+			"to": [6, 8, 6],
+			"faces": {
+				"north": {"uv": [6, 12, 8, 8], "texture": "#base_top"},
+				"east": {"uv": [6, 12, 8, 8], "texture": "#base_top"},
+				"south": {"uv": [6, 12, 8, 8], "texture": "#base_top"},
+				"west": {"uv": [6, 12, 8, 8], "texture": "#base_top"}
+			}
+		}
+	]
+}
