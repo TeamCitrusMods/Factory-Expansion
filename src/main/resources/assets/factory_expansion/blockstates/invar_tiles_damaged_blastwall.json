@@ -1,0 +1,208 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant0",
+        "uvlock": true
+      },
+      "when":
+        {
+          "north": "false", "variant": 0
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant0",
+        "y": 90
+      },
+      "when":
+        {
+          "east": "false", "variant": 0
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant0",
+        "y": 180
+      },
+      "when":
+        {
+          "south": "false", "variant": 0
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant0",
+        "y": 270
+      },
+      "when":
+        {
+          "west": "false", "variant": 0
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant1",
+        "uvlock": true
+      },
+      "when":
+        {
+          "north": "false", "variant": 1
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant1",
+        "y": 90
+      },
+      "when":
+        {
+          "east": "false", "variant": 1
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant1",
+        "y": 180
+      },
+      "when":
+        {
+          "south": "false", "variant": 1
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant1",
+        "y": 270
+      },
+      "when":
+        {
+          "west": "false", "variant": 1
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant2",
+        "uvlock": true
+      },
+      "when":
+        {
+          "north": "false", "variant": 2
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant2",
+        "y": 90
+      },
+      "when":
+        {
+          "east": "false", "variant": 2
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant2",
+        "y": 180
+      },
+      "when":
+        {
+          "south": "false", "variant": 2
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant2",
+        "y": 270
+      },
+      "when":
+        {
+          "west": "false", "variant": 2
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant3",
+        "uvlock": true
+      },
+      "when":
+        {
+          "north": "false", "variant": 3
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant3",
+        "y": 90
+      },
+      "when":
+        {
+          "east": "false", "variant": 3
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant3",
+        "y": 180
+      },
+      "when":
+        {
+          "south": "false", "variant": 3
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/tile_variant3",
+        "y": 270
+      },
+      "when":
+        {
+          "west": "false", "variant": 3
+        }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/base"
+      }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/bridge",
+        "uvlock": true
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/bridge",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/bridge",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "factory_expansion:block/blast_wall/bridge",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
+}

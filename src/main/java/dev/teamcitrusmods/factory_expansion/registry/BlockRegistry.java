@@ -3,7 +3,7 @@ package dev.teamcitrusmods.factory_expansion.registry;
 import cofh.thermal.core.ThermalCore;
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import dev.teamcitrusmods.factory_expansion.block.FluxLampBlock;
-import dev.teamcitrusmods.factory_expansion.block.BlastResultBlock;
+import dev.teamcitrusmods.factory_expansion.block.BlastwallBlock;
 import dev.teamcitrusmods.factory_expansion.block.PillarBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -64,6 +64,7 @@ public class BlockRegistry {
 
     // this one needs fixes
     public static final RegistryObject<Block> THERMAL_BRIGHT_DARK_TRANSITION = registerBlock("thermal_bright_dark_transition", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
     public static final RegistryObject<Block> SANDED_LEAD_BLOCK = registerBlock("sanded_lead_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
     public static final RegistryObject<Block> TREATED_PLANKS = registerBlock("treated_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
@@ -79,23 +80,21 @@ public class BlockRegistry {
     public static final RegistryObject<Block> WARM_CLINKER_BRICKS = registerBlock("warm_clinker_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
     // tile walls are gonna get a rework
-    public static final RegistryObject<Block> INDUSTRIAL_ROUGH_TILES_WALL = registerBlock("industrial_rough_tiles_wall", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
-    public static final RegistryObject<BlastResultBlock> INDUSTRIAL_ROUGH_TILES_EXPOSED = registerBlock("industrial_rough_tiles_exposed",
-            () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), 4, BlockRegistry.INDUSTRIAL_ROUGH_TILES_WALL.get()),
-            CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
-    public static final RegistryObject<BlastResultBlock> INDUSTRIAL_ROUGH_TILES = registerBlock("industrial_rough_tiles",
-            () -> new BlastResultBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), 1, BlockRegistry.INDUSTRIAL_ROUGH_TILES_EXPOSED.get()),
-            CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<BlastwallBlock> EXPOSED_BLASTWALL = registerBlock("exposed_blastwall",
+            () -> new BlastwallBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<BlastwallBlock> INVAR_TILES_DAMAGED_BLASTWALL = registerBlock("invar_tiles_damaged_blastwall",
+            () ->new BlastwallBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE), 4, EXPOSED_BLASTWALL.get()), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
 
+    public static final RegistryObject<BlastwallBlock> INVAR_TILES_BLASTWALL = registerBlock("invar_tiles_blastwall",
+            () ->new BlastwallBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE), INVAR_TILES_DAMAGED_BLASTWALL.get()), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
-    public static final RegistryObject<FenceBlock> BLAST_WALL_EXPOSED = registerBlock("blast_wall_exposed",
-            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
 
     public static final RegistryObject<PillarBlock> DEFAULT_PILLAR = registerBlock("default_pillar",
             () -> new PillarBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
-
-    // --- CUSTOM SHAPED BLOCKS
 
     public static final RegistryObject<Block> FLUX_LAMP = registerBlock("flux_lamp",
             () -> new FluxLampBlock(BlockBehaviour.Properties

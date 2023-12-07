@@ -1,10 +1,8 @@
 package dev.teamcitrusmods.factory_expansion.block;
 
-import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;

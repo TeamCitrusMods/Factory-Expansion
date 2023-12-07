@@ -77,6 +77,7 @@ dependencies {
     implementation fg.deobf("com.teamcofh:thermal_core:${minecraft_version}-${thermal_core_version}.+")
     implementation fg.deobf("com.teamcofh:thermal_expansion:${minecraft_version}-${thermal_expansion_version}.+")
     implementation fg.deobf("com.teamcofh:thermal_innovation:${minecraft_version}-${thermal_expansion_version}.+")
+    implementation fg.deobf("com.teamcofh:thermal_dynamics:${minecraft_version}-${thermal_expansion_version}.+")
 
     // compile against the JEI API but do not include it at runtime
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
