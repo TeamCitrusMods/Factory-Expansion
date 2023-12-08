@@ -151,7 +151,7 @@ public class BlastwallBlock extends Block {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(VARIANT).add(NORTH).add(EAST).add(SOUTH).add(WEST);
+        builder.add(VARIANT, NORTH, EAST, SOUTH, WEST);
     }
 
     /**
