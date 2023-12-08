@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/tiles",
+        "model": "factory_expansion:block/blastwall/invar/tiles",
         "uvlock": true
       },
       "when": {
@@ -11,7 +11,7 @@
     },
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/tiles",
+        "model": "factory_expansion:block/blastwall/invar/tiles",
         "y": 90
       },
       "when": {
@@ -20,7 +20,7 @@
     },
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/tiles",
+        "model": "factory_expansion:block/blastwall/invar/tiles",
         "y": 180
       },
       "when": {
@@ -29,7 +29,7 @@
     },
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/tiles",
+        "model": "factory_expansion:block/blastwall/invar/tiles",
         "y": 270
       },
       "when": {
@@ -38,12 +38,12 @@
     },
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/base"
+        "model": "factory_expansion:block/blastwall/base"
       }
     },
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/bridge",
+        "model": "factory_expansion:block/blastwall/bridge",
         "uvlock": true
       },
       "when": {
@@ -52,7 +52,7 @@
     },
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/bridge",
+        "model": "factory_expansion:block/blastwall/bridge",
         "uvlock": true,
         "y": 90
       },
@@ -62,7 +62,7 @@
     },
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/bridge",
+        "model": "factory_expansion:block/blastwall/bridge",
         "uvlock": true,
         "y": 180
       },
@@ -72,7 +72,7 @@
     },
     {
       "apply": {
-        "model": "factory_expansion:block/blast_wall/bridge",
+        "model": "factory_expansion:block/blastwall/bridge",
         "uvlock": true,
         "y": 270
       },

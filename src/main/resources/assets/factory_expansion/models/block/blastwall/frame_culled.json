@@ -1,10 +1,10 @@
 {
 	"credit": "an ElysiaSilly creation :D",
-	"textures": {
-		"particle": "factory_expansion:block/blast_wall/blast_wall_side",
-		"side": "factory_expansion:block/blast_wall/blast_wall_side"
-	},
 	"render_type": "cutout",
+	"textures": {
+		"particle": "factory_expansion:block/blastwall/side",
+		"side"    : "factory_expansion:block/blastwall/side"
+	},
 	"elements": [
 		{
 			"name": "bar",

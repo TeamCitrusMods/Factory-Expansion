@@ -1,11 +1,11 @@
 {
 	"credit": "an ElysiaSilly creation :D",
-	"textures": {
-		"particle": "factory_expansion:block/blast_wall/blast_wall_end",
-		"side": "factory_expansion:block/blast_wall/blast_wall_side",
-		"end": "factory_expansion:block/blast_wall/blast_wall_end"
-	},
 	"render_type": "cutout",
+	"textures": {
+		"particle": "factory_expansion:block/blastwall/end",
+		"side"    : "factory_expansion:block/blastwall/side",
+		"end"     : "factory_expansion:block/blastwall/end"
+	},
 	"elements": [
 		{
 			"name": "base",

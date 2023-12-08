@@ -1,11 +1,11 @@
 {
 	"credit": "an ElysiaSilly creation :D",
-	"textures": {
-		"side": "factory_expansion:block/blast_wall/blast_wall_side",
-		"particle": "#texture",
-		"tile": "#texture"
-	},
 	"render_type": "cutout",
+	"textures": {
+		"side"    : "factory_expansion:block/blastwall/side",
+		"particle": "#texture",
+		"tiles"   : "#texture"
+	},
 	"elements": [
 		{
 			"name": "bar",
@@ -32,13 +32,13 @@
 			}
 		},
 		{
-			"name": "tile",
+			"name": "tiles",
 			"from": [0, 0, 0],
 			"to": [16, 16, 0],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 6]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#tile", "cullface": "north"},
-				"south": {"uv": [16, 0, 0, 16], "texture": "#tile", "cullface": "north"}
+				"north": {"uv": [0, 0, 16, 16], "texture": "#tiles", "cullface": "north"},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#tiles", "cullface": "north"}
 			}
 		}
 	]
