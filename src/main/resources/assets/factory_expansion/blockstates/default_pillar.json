@@ -1,15 +1,15 @@
 {
   "variants": {
-    "section=0": {
+    "up=false,down=false": {
       "model": "factory_expansion:block/default_pillar/section0"
     },
-    "section=1": {
+    "up=true,down=false": {
       "model": "factory_expansion:block/default_pillar/section1"
     },
-    "section=2": {
+    "up=true,down=true": {
       "model": "factory_expansion:block/default_pillar/section2"
     },
-    "section=3": {
+    "up=false,down=true": {
       "model": "factory_expansion:block/default_pillar/section3"
     }
   }

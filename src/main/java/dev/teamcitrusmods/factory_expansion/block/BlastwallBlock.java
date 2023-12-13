@@ -1,12 +1,16 @@
 package dev.teamcitrusmods.factory_expansion.block;
 
+import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -20,8 +24,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class BlastwallBlock extends Block {
 
-    //TODO: check how fences are instant but blastwalls are not, dynamic hitbox
-
     //this needs to be defined by the time super is called in the constructor
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 7);
 
@@ -30,6 +32,7 @@ public class BlastwallBlock extends Block {
     public static final BooleanProperty SOUTH = BlockStateProperties.SOUTH;
     public static final BooleanProperty WEST = BlockStateProperties.WEST;
 
+    //TODO: dynamic hitbox
     public static final VoxelShape SHAPE =
             Block.box(2, 0, 2, 14, 16, 14);
 
@@ -66,7 +69,7 @@ public class BlastwallBlock extends Block {
     // to use when explosion destroys it
     public BlastwallBlock(Properties pProperties) {
         super(pProperties);
-        this.result = null;
+        this.result = Blocks.AIR;
         this.maxVariants = 1;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(VARIANT, 0)
@@ -81,6 +84,10 @@ public class BlastwallBlock extends Block {
         return SHAPE;
     }
 
+    public boolean connectsTo(BlockState state) {
+        return state.getBlock() instanceof BlastwallBlock;
+    }
+
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
@@ -90,53 +97,26 @@ public class BlastwallBlock extends Block {
         ran.setSeed(dTime);
         int n = ran.nextInt(maxVariants);
 
-        // code related to sides
-        boolean[] setSides = checkSides(pContext.getLevel(), pContext.getClickedPos());
-
         //
-        return this.defaultBlockState()
+        return super.getStateForPlacement(pContext)
                 .setValue(VARIANT, n)
-                .setValue(NORTH, setSides[0])
-                .setValue(EAST, setSides[1])
-                .setValue(SOUTH, setSides[2])
-                .setValue(WEST, setSides[3]);
+                .setValue(NORTH, this.connectsTo(pContext.getLevel().getBlockState(pContext.getClickedPos().north())))
+                .setValue(EAST, this.connectsTo(pContext.getLevel().getBlockState(pContext.getClickedPos().east())))
+                .setValue(SOUTH, this.connectsTo(pContext.getLevel().getBlockState(pContext.getClickedPos().south())))
+                .setValue(WEST, this.connectsTo(pContext.getLevel().getBlockState(pContext.getClickedPos().west())));
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block bock, BlockPos fromPos, boolean isMoving) {
-        if(level.isClientSide) {
-            return;
-        }
-
-        boolean[] setSides = checkSides(level, pos);
-        BlockState newState = this.defaultBlockState();
-        newState = newState
-                .setValue(NORTH, setSides[0])
-                .setValue(EAST, setSides[1])
-                .setValue(SOUTH, setSides[2])
-                .setValue(WEST, setSides[3]);
-        level.setBlockAndUpdate(pos, newState);
-        level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(newState));
-    }
-
-    public boolean[] checkSides(Level lvl, BlockPos pos) {
-        boolean[] toReturn = {false, false, false, false};
-        Block[] blocksNESW = {
-                lvl.getBlockState(pos.north()).getBlock(),
-                lvl.getBlockState(pos.east()).getBlock(),
-                lvl.getBlockState(pos.south()).getBlock(),
-                lvl.getBlockState(pos.west()).getBlock()
-        };
-        for (int i = 0; i < 4; i++) {
-            toReturn[i] = blocksNESW[i] instanceof BlastwallBlock;
-        }
-        return toReturn;
+    public BlockState updateShape(BlockState pState, Direction pDirection, BlockState pNeighborState, LevelAccessor pLevel, BlockPos pCurrentPos, BlockPos pNeighborPos) {
+        return pState
+                .setValue(NORTH, this.connectsTo(pLevel.getBlockState(pCurrentPos.north())))
+                .setValue(EAST, this.connectsTo(pLevel.getBlockState(pCurrentPos.east())))
+                .setValue(SOUTH, this.connectsTo(pLevel.getBlockState(pCurrentPos.south())))
+                .setValue(WEST, this.connectsTo(pLevel.getBlockState(pCurrentPos.west())));
     }
 
     @Override
     public void wasExploded(Level level, @NotNull BlockPos pos, @NotNull Explosion explosion) {
-        if(null == result)
-            super.wasExploded(level, pos, explosion);
 
         BlockState newState = result.defaultBlockState();
         //check if result block is a blast result block. If so, randomize the state

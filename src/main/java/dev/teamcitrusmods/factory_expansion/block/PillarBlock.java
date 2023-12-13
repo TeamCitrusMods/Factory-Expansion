@@ -1,64 +1,49 @@
 package dev.teamcitrusmods.factory_expansion.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.PipeBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.Nullable;
 
 public class PillarBlock extends Block {
 
-    public static final IntegerProperty SECTION = IntegerProperty.create("section", 0, 3);
-    // 0 = shortest // 1 = bottom // 2 = middle // 3 = top
+    public static final BooleanProperty UP = PipeBlock.UP;
+    public static final BooleanProperty DOWN = PipeBlock.DOWN;
 
     public PillarBlock(Properties pProperties) {
         super(pProperties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(SECTION, 0));
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(UP, false)
+                .setValue(DOWN, false));
+    }
+
+    public boolean connectsTo(BlockState state) {
+        return state.getBlock() instanceof PillarBlock;
     }
 
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        BlockState above = pContext.getLevel().getBlockState(pContext.getClickedPos().above());
-        BlockState below = pContext.getLevel().getBlockState(pContext.getClickedPos().below());
-        int sec = checkPillar(above.getBlock(), below.getBlock());
-        return this.defaultBlockState().setValue(SECTION, sec);
+        return super.getStateForPlacement(pContext)
+                .setValue(UP, this.connectsTo(pContext.getLevel().getBlockState(pContext.getClickedPos().above())))
+                .setValue(DOWN, this.connectsTo(pContext.getLevel().getBlockState(pContext.getClickedPos().below())));
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
-        if(level.isClientSide()){
-            return;
-        }
-
-        BlockState above = level.getBlockState(pos.above());
-        BlockState below = level.getBlockState(pos.below());
-        int sec = checkPillar(above.getBlock(), below.getBlock());
-        BlockState newState = this.defaultBlockState();
-        newState = newState.setValue(SECTION, sec);
-        level.setBlockAndUpdate(pos, newState);
-        level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(newState));
-    }
-
-    public int checkPillar(Block above, Block below) {
-        if(below instanceof PillarBlock) {
-            if(above instanceof  PillarBlock) {
-                return 2; //mid red
-            } else {
-                return 3; //top green
-            }
-        } else if(above instanceof PillarBlock) {
-            return 1; //bot blue
-        }
-        return 0; //nul yellow
+    public BlockState updateShape(BlockState pState, Direction pDirection, BlockState pNeighborState, LevelAccessor pLevel, BlockPos pCurrentPos, BlockPos pNeighborPos) {
+        return pState
+                .setValue(UP, this.connectsTo(pLevel.getBlockState(pCurrentPos.above())))
+                .setValue(DOWN, this.connectsTo(pLevel.getBlockState(pCurrentPos.below())));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(SECTION);
+        pBuilder.add(UP, DOWN);
     }
 }
