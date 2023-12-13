@@ -68,6 +68,14 @@ repositories {
     maven { url 'https://maven.covers1624.net/' } // Thermal
     maven { url 'https://dvs1.progwml6.com/files/maven/' } // JEI
     maven { url 'https://maven.blamejared.com/' } // Patchouli
+
+
+    flatDir {
+        dirs 'run/downloaded'
+        content {
+            includeGroup 'local'
+        }
+    }
 }
 
 dependencies {
@@ -76,7 +84,9 @@ dependencies {
     implementation fg.deobf("com.teamcofh:cofh_core:${minecraft_version}-${cofh_core_version}.+")
     implementation fg.deobf("com.teamcofh:thermal_core:${minecraft_version}-${thermal_core_version}.+")
     implementation fg.deobf("com.teamcofh:thermal_expansion:${minecraft_version}-${thermal_expansion_version}.+")
-    //implementation fg.deobf("com.teamcofh:thermal_foundation:${minecraft_version}-${thermal_expansion_version}.+")
+    // IMPORTANT: DOWNLOAD THERMAL FOUNDATION (1.19.2-10.3.0.55) AND PUT IT INTO run/downloaded/
+    // https://www.curseforge.com/minecraft/mc-mods/thermal-foundation/download/4760629
+    implementation fg.deobf("local:thermal_foundation:${minecraft_version}-${thermal_expansion_version}.+")
     implementation fg.deobf("com.teamcofh:thermal_innovation:${minecraft_version}-${thermal_expansion_version}.+")
     implementation fg.deobf("com.teamcofh:thermal_dynamics:${minecraft_version}-${thermal_expansion_version}.+")
 
