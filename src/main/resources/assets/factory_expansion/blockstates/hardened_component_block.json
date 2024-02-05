@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "variant=0": {
+      "model": "factory_expansion:block/integral_component/hardened"
+    },
+    "variant=1": {
+      "model": "factory_expansion:block/integral_component/stacked/hardened_hardened"
+    },
+    "variant=2": {
+      "model": "factory_expansion:block/integral_component/stacked/hardened_reinforced"
+    },
+    "variant=3": {
+      "model": "factory_expansion:block/integral_component/stacked/hardened_resonant"
+    }
+  }
+}

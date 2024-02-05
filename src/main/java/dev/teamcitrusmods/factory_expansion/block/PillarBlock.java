@@ -1,5 +1,7 @@
 package dev.teamcitrusmods.factory_expansion.block;
 
+import cofh.thermal.core.ThermalCore;
+import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;

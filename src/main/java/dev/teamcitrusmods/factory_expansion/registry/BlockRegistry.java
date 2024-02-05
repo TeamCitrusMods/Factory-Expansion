@@ -1,10 +1,15 @@
 package dev.teamcitrusmods.factory_expansion.registry;
 
 import cofh.thermal.core.ThermalCore;
+import static cofh.thermal.core.util.RegistrationHelper.registerBlockAndItem;
+
+import cofh.thermal.core.util.RegistrationHelper;
 import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
+import dev.teamcitrusmods.factory_expansion.block.ComponentBlock;
 import dev.teamcitrusmods.factory_expansion.block.FluxLampBlock;
 import dev.teamcitrusmods.factory_expansion.block.BlastwallBlock;
 import dev.teamcitrusmods.factory_expansion.block.PillarBlock;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -12,7 +17,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,15 +25,17 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
-import static cofh.thermal.lib.common.ThermalIDs.ID_SLAG_BLOCK;
-import static cofh.thermal.lib.common.ThermalIDs.ID_SLAG_BRICKS;
 
 public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FactoryExpansion.MODID);
 
+    public static final String ID_SLAG_BLOCK = "slag_block";
+    public static final String ID_RICH_SLAG_BLOCK = "rich_slag_block";
+
 
     // --- THERMAL BLOCKS
+
 
     public static final RegistryObject<SlabBlock> SLAG_BLOCK_SLAB = registerBlock("slag_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BLOCK))), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<StairBlock> SLAG_BLOCK_STAIRS = registerBlock("slag_block_stairs", () -> new StairBlock(() -> ThermalCore.BLOCKS.get(ID_SLAG_BLOCK).defaultBlockState(), BlockBehaviour.Properties.copy(ThermalCore.BLOCKS.get(ID_SLAG_BLOCK))), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
@@ -79,8 +85,6 @@ public class BlockRegistry {
     public static final RegistryObject<Block> SOULSAND_BRICKS_RIGHT = registerBlock("soulsand_bricks_right", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
     public static final RegistryObject<Block> WARM_CLINKER_BRICKS = registerBlock("warm_clinker_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
-    // tile walls are gonna get a rework
-
     public static final RegistryObject<BlastwallBlock> EXPOSED_BLASTWALL = registerBlock("exposed_blastwall",
             () -> new BlastwallBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
@@ -96,21 +100,30 @@ public class BlockRegistry {
     public static final RegistryObject<PillarBlock> DEFAULT_PILLAR = registerBlock("default_pillar",
             () -> new PillarBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
-    public static final RegistryObject<Block> FLUX_LAMP = registerBlock("flux_lamp",
+    public static final RegistryObject<FluxLampBlock> FLUX_LAMP = registerBlock("flux_lamp",
             () -> new FluxLampBlock(BlockBehaviour.Properties
-                    .of(Material.METAL)
+                    .copy(Blocks.IRON_BLOCK)
                     .strength(6f)
                     .requiresCorrectToolForDrops()
                     .lightLevel(litBlockEmission(15))
                     .noOcclusion()), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
 
-    public static final RegistryObject<Block> FLUX_LAMP_INVERTED = registerBlock("flux_lamp_inverted",
+    public static final RegistryObject<FluxLampBlock> FLUX_LAMP_INVERTED = registerBlock("flux_lamp_inverted",
             () -> new FluxLampBlock(BlockBehaviour.Properties
-                    .of(Material.METAL)
+                    .copy(Blocks.IRON_BLOCK)
                     .strength(6f)
                     .requiresCorrectToolForDrops()
                     .lightLevel(litBlockEmission(0))
                     .noOcclusion()), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<ComponentBlock> HARDENED_COMPONENT_BLOCK = registerBlock("hardened_component_block",
+            () -> new ComponentBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
+    public static final RegistryObject<ComponentBlock> REINFORCED_COMPONENT_BLOCK = registerBlock("reinforced_component_block",
+            () -> new ComponentBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+    public static final RegistryObject<ComponentBlock> RESONANT_COMPONENT_BLOCK = registerBlock("resonant_component_block",
+            () -> new ComponentBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), CreativeModeTabRegistry.FACTORY_EXPANSION_TAB);
+
 
 
     private static ToIntFunction<BlockState> litBlockEmission(int pLightValue) {
@@ -118,9 +131,6 @@ public class BlockRegistry {
             return p_50763_.getValue(BlockStateProperties.LIT) ? pLightValue : 15 - pLightValue;
         };
     }
-
-
-    // --- HELPER FUNCTIONS
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                      CreativeModeTab tab) {

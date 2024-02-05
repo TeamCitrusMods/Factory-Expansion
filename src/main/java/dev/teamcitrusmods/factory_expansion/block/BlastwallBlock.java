@@ -1,6 +1,5 @@
 package dev.teamcitrusmods.factory_expansion.block;
 
-import dev.teamcitrusmods.factory_expansion.FactoryExpansion;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -10,7 +9,6 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -69,7 +67,7 @@ public class BlastwallBlock extends Block {
     // to use when explosion destroys it
     public BlastwallBlock(Properties pProperties) {
         super(pProperties);
-        this.result = Blocks.AIR;
+        this.result = null;
         this.maxVariants = 1;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(VARIANT, 0)
@@ -117,6 +115,10 @@ public class BlastwallBlock extends Block {
 
     @Override
     public void wasExploded(Level level, @NotNull BlockPos pos, @NotNull Explosion explosion) {
+        if(result == null) {
+            super.wasExploded(level, pos, explosion);
+            return;
+        }
 
         BlockState newState = result.defaultBlockState();
         //check if result block is a blast result block. If so, randomize the state
